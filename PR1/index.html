@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Include Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+        /* Custom CSS for sticky header and navbar */
+        .sticky-top {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 1020;
+        }
+        .sidebar {
+            /* height: 100vh; */
+            /* overflow-y: auto; */
+            padding-top: 10px; 
+            /* Add some padding for better visibility */
+        }
+    </style>
+    <title>My Profile</title>
+  </head>
+  <body>
+    <header class="bg-dark text-white text-center py-4 ">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+            <img src="logo.png" alt="Logo" class="img-fluid" width="100px" />
+          </div>
+          <div class="col-md-10">
+            <h1 class="display-4">My Profile</h1>
+            <p class="lead">Your Personal Space</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">My Profile</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#" data-content="home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-content="about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-content="portfolio"
+                >Portfolio</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-content="contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container my-5">
+      <div class="row">
+        <div class="col-md-8">
+          <section class="content">
+
+          </section>
+        </div>
+        <div class="col-md-3">
+          <aside class="sidebar sticky-top ">
+            <h2>Quick Links</h2>
+            <ul class="list-unstyled">
+              <li><a href="#">Resume</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Projects</a></li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+      <p>&copy; 2023 My Profile | Contact: 21CS041@charusat.edu.in</p>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Function to update the content based on the clicked link
+        function updateContent(contentType) {
+          const contentContainer = document.querySelector(".content");
+          contentContainer.innerHTML = "";
+
+          switch (contentType) {
+            case "home":
+              contentContainer.innerHTML = `
+                            <p>        <div class="jumbotron text-center">
+            <h2>Welcome to My Website</h2>
+            <p>My name is Patel Dhruv N</p>
+            <p>ID: 21CS041</p>
+            <p>Course: Computer Science Engineering (CSE)</p>
+            <p>Semester: 5th</p>
+            <p>Subject: Full Stack Development (FSD)</p>
+            <a href="#about" class="btn btn-primary btn-lg">Learn More</a>
+        </div>
+                        `;
+              break;
+            case "about":
+              contentContainer.innerHTML = `
+              <h2 >About Me</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="pro.jpg" class="img-fluid rounded-circle" alt="My Photo">
+            </div>
+            <div class="col-md-6">
+                <p>
+                    My name is Patel Dhruv N, and I'm a passionate Computer Science Engineering (CSE) student currently in my 5th semester.
+                    I specialize in Full Stack Development (FSD) and enjoy creating web applications and solving real-world problems with code.
+                </p>
+                <p>
+                    In my free time, I love to explore new technologies, contribute to open-source projects, and write tech articles on my blog.
+                    I'm dedicated to continuous learning and growth in the field of software development.
+                </p>
+            </div>
+        </div>
+    </div>
+                        `;
+              break;
+            case "portfolio":
+              contentContainer.innerHTML = `
+              <h2 class="text-center">Portfolio</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                   
+                    <div class="card-body">
+                        <h5 class="card-title">Project 1</h5>
+                        <p class="card-text">Description of Project 1 goes here.</p>
+                        <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                   
+                    <div class="card-body">
+                        <h5 class="card-title">Project 2</h5>
+                        <p class="card-text">Description of Project 2 goes here.</p>
+                        <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                   
+                    <div class="card-body">
+                        <h5 class="card-title">Project 3</h5>
+                        <p class="card-text">Description of Project 3 goes here.</p>
+                        <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">Project 4</h5>
+                        <p class="card-text">Description of Project 4 goes here.</p>
+                        <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">Project 5</h5>
+                        <p class="card-text">Description of Project 5 goes here.</p>
+                        <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>  <div class="col-md-4">
+                <div class="card mb-4">
+                   
+                    <div class="card-body">
+                        <h5 class="card-title">Project 6</h5>
+                        <p class="card-text">Description of Project 6 goes here.</p>
+                        <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+                        `;
+              break;
+
+              case "contact":
+              contentContainer.innerHTML = `
+              <h2 >Contact Us</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <address>
+                            <h4>Contact Information</h4>
+                            <p><strong>Address:</strong> Anand ,Gujrat</p>
+                            <p><strong>Email:</strong>21CS041@charusat.edu.in</p>
+                            <p><strong>Phone:</strong> 00000000</p>
+                        </address>
+                    </div>
+                </div>
+              `
+              break;
+          }
+
+           
+        }
+
+ 
+    
+
+        // Event listeners for navigation links
+        const navLinks = document.querySelectorAll(".nav-link");
+        navLinks.forEach(function (link) {
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const contentType = this.getAttribute("data-content");
+            updateContent(contentType);
+          });
+        });
+
+        // Initialize with the "Home" content
+        updateContent("home");
+
+        navLinks.forEach(function (link) {
+        link.classList.remove("active");
+      });
+
+      // Add the 'active' class to the clicked link
+      const activeLink = document.querySelector(`[data-content="${contentType}"]`);
+      activeLink.classList.add("active");
+      });
+    </script> 
+ 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+
+
+
