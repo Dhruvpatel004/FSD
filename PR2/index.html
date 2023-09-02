@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Headings Color</title>
+</head>
+<body>
+    <h1 id="heading1">Charusat</h1>
+    <h1 id="heading2">CSE</h1>
+    <button id="startButton">Start</button>
+
+    <script>
+        // JavaScript code here
+        // Declare variables to store the colors
+var color1 = "red"; // Using var (function-scoped)
+let color2 = "blue"; // Using let (block-scoped)
+
+// Get references to the headings
+const heading1 = document.getElementById("heading1");
+const heading2 = document.getElementById("heading2");
+
+// Function to change the color of the headings
+function changeColors() {
+    heading1.style.color = color1;
+    heading2.style.color = color2;
+    
+    // Swap the colors for the next iteration
+    const temp = color1;
+    color1 = color2;
+    color2 = temp;
+}
+// Get a reference to the Start button
+const startButton = document.getElementById("startButton");
+
+// Add a click event listener to start changing colors
+startButton.addEventListener("click", () => {
+    // Use setInterval to change colors every 1 second
+    setInterval(changeColors, 1000);
+});
+    </script>
+</body>
+</html>
