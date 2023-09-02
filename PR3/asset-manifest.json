@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/FSD/PR3/static/css/main.e6c13ad2.css",
+    "main.js": "/FSD/PR3/static/js/main.4994686d.js",
+    "static/js/787.c1c89e70.chunk.js": "/FSD/PR3/static/js/787.c1c89e70.chunk.js",
+    "index.html": "/FSD/PR3/index.html",
+    "main.e6c13ad2.css.map": "/FSD/PR3/static/css/main.e6c13ad2.css.map",
+    "main.4994686d.js.map": "/FSD/PR3/static/js/main.4994686d.js.map",
+    "787.c1c89e70.chunk.js.map": "/FSD/PR3/static/js/787.c1c89e70.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.4994686d.js"
+  ]
+}
